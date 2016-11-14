@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "MIView.h"
 
 @interface ViewController ()<CALayerDelegate>
 
@@ -17,6 +18,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //[self layerTest];
+    
+    [self layerDelegateTest];
+}
+
+- (void)layerTest {
     CGFloat width = [UIScreen mainScreen].bounds.size.width;
     CGFloat height = [UIScreen mainScreen].bounds.size.height;
     CALayer *layer = [CALayer layer];
@@ -38,10 +45,18 @@
     CGContextStrokeEllipseInRect(ctx, layer.bounds);
 }
 
+#if 0
 //重写了该方法，drawLayer:inContext:就不会走了
 //也就是CALayer取寄宿图时，该方法的优先级比上边那个方法高
 - (void)displayLayer:(CALayer *)layer {
     
+}
+#endif
+
+- (void)layerDelegateTest {
+    MIView *view = [[MIView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+    view.center = self.view.center;
+    [self.view addSubview:view];
 }
 
 - (void)didReceiveMemoryWarning {
