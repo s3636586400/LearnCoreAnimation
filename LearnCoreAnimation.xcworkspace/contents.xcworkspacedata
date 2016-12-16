@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:4.ImageViewTest/4.ImageViewTest.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:3.CALayerDelegate/3.CALayerDelegate.xcodeproj">
    </FileRef>
    <FileRef

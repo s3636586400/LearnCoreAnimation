@@ -18,9 +18,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //[self layerTest];
+//    [self layerTest];
     
     [self layerDelegateTest];
+    
 }
 
 - (void)layerTest {
@@ -34,7 +35,7 @@
     layer.contentsScale = [UIScreen mainScreen].scale;
     [self.view.layer addSublayer:layer];
     
-    //layer不被调用式不会显示的
+    //layer不被显示调用是不会显示的
     [layer display];
 }
 
